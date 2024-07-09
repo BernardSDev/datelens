@@ -3,7 +3,7 @@ export default function Screen({ count }) {
   date.setDate(date.getDate() + count)
 
   return (
-    <div className="mb-10 rounded-lg bg-[#6C5EF1] px-6 pt-8 font-bold text-white shadow-xl shadow-indigo-400/55">
+    <div className="mb-10 rounded-lg bg-[#6C5EF1] px-6 pb-10 pt-8 font-bold text-white shadow-xl shadow-indigo-400/55">
       <span className="mb-4 block text-xl text-gray-400">
         {count === 0
           ? 'Today is '

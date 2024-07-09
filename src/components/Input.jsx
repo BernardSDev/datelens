@@ -5,7 +5,7 @@ export default function Input({ step, setStep, onPreviousStep, onNextStep }) {
     <div className="mt-4">
       <p className="pl-16 text-xl font-semibold text-[#5f5f5f]">Step: {step}</p>
       <div className="flex items-center justify-between gap-2">
-        <Button bgColor="#fb923c" size={50} onClick={onPreviousStep}>
+        <Button bgColor="#fb923c" size={40} onClick={onPreviousStep}>
           <span className="text-3xl text-white">-</span>
         </Button>
         <input
@@ -16,7 +16,7 @@ export default function Input({ step, setStep, onPreviousStep, onNextStep }) {
           value={step}
           onChange={(e) => setStep(Number(e.target.value))}
         />
-        <Button bgColor="#fb923c" size={50} onClick={onNextStep}>
+        <Button bgColor="#fb923c" size={40} onClick={onNextStep}>
           <span className="text-2xl text-white">+</span>
         </Button>
       </div>

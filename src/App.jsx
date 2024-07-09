@@ -36,7 +36,8 @@ export default function App() {
           className="h-dvh w-full px-6"
           style={{
             display: 'grid',
-            gridTemplateRows: '10dvh auto 25dvh auto 10dvh',
+            gridTemplateRows:
+              '10dvh auto minmax(20dvh, min-content) auto 10dvh',
           }}
         >
           <Header count={count} step={step} onReset={handleReset} />
