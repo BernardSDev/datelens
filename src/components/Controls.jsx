@@ -18,7 +18,7 @@ export default function Controls({
           placeItems: 'center',
         }}
       >
-        <Button onClick={onBackward}>
+        <Button bgColor="#32803f" size={50} onClick={onBackward}>
           <Icon
             icon="fluent-mdl2:back"
             className="text-white"
@@ -28,16 +28,16 @@ export default function Controls({
         </Button>
 
         <div className="flex w-48 items-center justify-between">
-          <Button onClick={onPreviousStep}>
+          <Button bgColor="#df1f1f" size={40} onClick={onPreviousStep}>
             <span className="text-white">-</span>
           </Button>
           <span className="block text-2xl text-[#191a19]">Step: {step}</span>
-          <Button onClick={onNextStep}>
+          <Button bgColor="#df1f1f" size={40} onClick={onNextStep}>
             <span className="text-white">+</span>
           </Button>
         </div>
 
-        <Button onClick={onForward}>
+        <Button bgColor="#32803f" size={50} onClick={onForward}>
           <Icon
             icon="fluent-mdl2:forward"
             width="1.2em"

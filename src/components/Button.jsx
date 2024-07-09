@@ -1,7 +1,19 @@
-export default function Button({ children, onClick, bgColor }) {
+export default function Button({
+  bgColor,
+  textColor,
+  size,
+  onClick,
+  children,
+}) {
   return (
     <button
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-[#124047]"
+      className="flex items-center justify-center rounded-full"
+      style={{
+        backgroundColor: `${bgColor}`,
+        color: `${textColor}`,
+        height: `${size}px`,
+        width: `${size}px`,
+      }}
       onClick={onClick}
     >
       {children}
