@@ -34,7 +34,7 @@ export default function App() {
       <div className="mx-auto max-w-[960px]">
         <div
           className="h-screen w-full shadow-lg"
-          style={{ display: 'grid', gridTemplateRows: '15vh 40vh 30vh 15vh' }}
+          style={{ display: 'grid', gridTemplateRows: '15vh 40vh 25vh 20vh' }}
         >
           <Header count={count} step={step} onReset={handleReset} />
           <Screen count={count} />
