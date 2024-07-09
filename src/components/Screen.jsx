@@ -3,9 +3,9 @@ export default function Screen({ count }) {
   date.setDate(date.getDate() + count)
 
   return (
-    <div className="grid place-items-center text-[#ff6e3b]">
+    <div className="mx-16 my-8 grid place-items-center rounded-lg bg-[#e7e7e2] font-bold text-violet-600">
       <div>
-        <span className="block text-2xl text-[#000]">
+        <span className="block text-2xl text-[#9EC64B]">
           {count === 0
             ? 'Today is '
             : count > 0

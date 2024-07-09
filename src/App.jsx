@@ -30,13 +30,13 @@ export default function App() {
   }
 
   return (
-    <div className="bg-[#edece6]">
+    <div className="bg-[#e1dece]">
       <div className="mx-auto max-w-[960px]">
         <div
-          className="h-screen w-full"
+          className="h-screen w-full shadow-lg"
           style={{ display: 'grid', gridTemplateRows: '15vh 40vh 30vh 15vh' }}
         >
-          <Header count={count} onReset={handleReset} />
+          <Header count={count} step={step} onReset={handleReset} />
           <Screen count={count} />
           <Input
             step={step}
