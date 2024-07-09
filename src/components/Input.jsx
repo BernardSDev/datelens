@@ -1,8 +1,8 @@
 export default function Input({ step, setStep }) {
   return (
-    <div className="">
+    <div className="grid place-items-center">
       <input
-        className="range h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#9cc9d0] pr-6 accent-white dark:bg-gray-700"
+        className="range mx-auto block h-2 w-5/6 cursor-pointer appearance-none rounded-lg bg-[#9cc9d0] pr-6 accent-white dark:bg-gray-700"
         type="range"
         min="1"
         max="10"

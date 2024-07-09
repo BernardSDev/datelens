@@ -29,19 +29,31 @@ export default function App() {
   }
 
   return (
-    <div className="relative grid h-screen w-full grid-cols-1 grid-rows-3 gap-4 bg-[#243C58]">
-      <div className="relative mx-auto max-w-[786px]">
-        <Screen count={count} />
-        <Input step={step} setStep={setStep} />
-        <Controls
-          step={step}
-          onSetCount={setCount}
-          onBackward={handleBackward}
-          onForward={handleForward}
-          onPreviousStep={handlePreviousStep}
-          onNextStep={handleNextStep}
-        />
-        {count !== 0 || step !== 1 ? <Reset onReset={handleReset} /> : null}
+    <div className="h-screen w-full bg-[#edece6]">
+      <div className="mx-auto max-w-[960px] p-4">
+        <header className="mb-10 flex justify-between">
+          <h1 className="text-4xl font-semibold text-black">
+            <span>date</span>
+            <span className="text-[#40d1d6]">Lens</span>
+          </h1>
+          <nav>
+            {count !== 0 || step !== 1 ? <Reset onReset={handleReset} /> : null}
+          </nav>
+        </header>
+        <main
+          style={{ display: 'grid', gridTemplateRows: '250px 200px 100px' }}
+        >
+          <Screen count={count} />
+          <Input step={step} setStep={setStep} />
+          <Controls
+            step={step}
+            onSetCount={setCount}
+            onBackward={handleBackward}
+            onForward={handleForward}
+            onPreviousStep={handlePreviousStep}
+            onNextStep={handleNextStep}
+          />
+        </main>
       </div>
     </div>
   )

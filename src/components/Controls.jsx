@@ -9,24 +9,41 @@ export default function Controls({
   onNextStep,
 }) {
   return (
-    <div className="">
-      <div className="flex justify-between p-4">
+    <div className="mx-auto w-5/6">
+      <div
+        className=""
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '50 300px 50',
+          placeItems: 'center',
+        }}
+      >
         <Button onClick={onBackward}>
-          <Icon icon="fluent-mdl2:back" width="1.2em" height="1.2em" />
+          <Icon
+            icon="fluent-mdl2:back"
+            className="text-white"
+            width="1.2em"
+            height="1.2em"
+          />
         </Button>
 
-        <div className="bg-red-5000 flex w-48 items-center justify-between">
+        <div className="flex w-48 items-center justify-between">
           <Button onClick={onPreviousStep}>
-            <span className="text-black">-</span>
+            <span className="text-white">-</span>
           </Button>
-          <span className="block text-2xl text-[#ddac86]">Step: {step}</span>
+          <span className="block text-2xl text-[#191a19]">Step: {step}</span>
           <Button onClick={onNextStep}>
-            <span className="text-black">+</span>
+            <span className="text-white">+</span>
           </Button>
         </div>
 
         <Button onClick={onForward}>
-          <Icon icon="fluent-mdl2:forward" width="1.2em" height="1.2em" />
+          <Icon
+            icon="fluent-mdl2:forward"
+            width="1.2em"
+            height="1.2em"
+            className="text-white"
+          />
         </Button>
       </div>
     </div>
