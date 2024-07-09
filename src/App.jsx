@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Controls from './components/Controls'
 import Input from './components/Input'
 import Screen from './components/Screen'
-import Reset from './components/Reset'
 import Header from './components/Header'
 
 export default function App() {
@@ -33,7 +32,7 @@ export default function App() {
     <div className="bg-[#e1dece]">
       <div className="mx-auto max-w-[960px]">
         <div
-          className="h-screen w-full shadow-lg"
+          className="h-dvh w-full shadow-lg"
           style={{ display: 'grid', gridTemplateRows: '15vh 40vh 25vh 20vh' }}
         >
           <Header count={count} step={step} onReset={handleReset} />
