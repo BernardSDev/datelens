@@ -30,13 +30,13 @@ export default function App() {
   }
 
   return (
-    <div className="bg-[#e1dece]">
+    <div className="bg-white">
       <div className="mx-auto max-w-[960px]">
         <div
-          className="h-dvh w-full shadow-lg"
+          className="h-dvh w-full px-6"
           style={{
             display: 'grid',
-            gridTemplateRows: '10dvh 18vh 40dvh 20dvh 12dvh',
+            gridTemplateRows: '10dvh auto 25dvh auto 10dvh',
           }}
         >
           <Header count={count} step={step} onReset={handleReset} />

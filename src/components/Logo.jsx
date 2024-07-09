@@ -1,8 +1,8 @@
 export default function Logo() {
   return (
-    <h1 className="text-4xl font-semibold text-[#000]">
-      <span>date</span>
-      <span className="font-extrabold text-[#e94438]">Lens</span>
+    <h1 className="font-semibold text-orange-400">
+      <span className="text-xl">date</span>
+      <span className="text-4xl font-extrabold text-[#4AC3F6]">Lens</span>
     </h1>
   )
 }

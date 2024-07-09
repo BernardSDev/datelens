@@ -3,38 +3,38 @@ import Button from './Button'
 
 export default function Controls({ onBackward, onForward }) {
   return (
-    <div className="flex items-center justify-around rounded-tl-lg rounded-tr-lg bg-violet-600">
+    <div className="flex items-center justify-between rounded-tl-lg rounded-tr-lg">
       <Button
-        bgColor="#9EC64B"
-        left={30}
-        right={30}
-        top={12}
-        bottom={12}
+        bgColor="#6C5EF1"
+        left={20}
+        right={20}
+        top={7}
+        bottom={7}
         onClick={onBackward}
       >
         <Icon
           icon="fluent-mdl2:back"
           width="1.2em"
           height="1.2em"
-          className="text-black"
+          className="text-white"
         />
-        <span className="pl-2 text-xl font-bold">Backward</span>
+        <span className="pl-3 text-lg font-semibold text-white">Backward</span>
       </Button>
 
       <Button
-        bgColor="#9EC64B"
+        bgColor="#6C5EF1"
+        left={20}
+        right={20}
+        top={7}
+        bottom={7}
         onClick={onForward}
-        left={30}
-        right={30}
-        top={12}
-        bottom={12}
       >
-        <span className="pr-2 text-xl font-bold">Forward</span>
+        <span className="pr-3 text-lg font-semibold text-white">Forward</span>
         <Icon
           icon="fluent-mdl2:forward"
           width="1.2em"
           height="1.2em"
-          className="text-black"
+          className="text-white"
         />
       </Button>
     </div>

@@ -2,22 +2,22 @@ import Button from './Button'
 
 export default function Input({ step, setStep, onPreviousStep, onNextStep }) {
   return (
-    <div className="px-10 pt-10">
-      <p className="pl-20 text-xl font-semibold">Step: {step}</p>
-      <div className="mx-auto flex items-center justify-center gap-5">
-        <Button bgColor="#F5CB3A" size={50} onClick={onPreviousStep}>
-          <span className="text-5xl text-black">-</span>
+    <div className="mt-4">
+      <p className="pl-16 text-xl font-semibold text-[#5f5f5f]">Step: {step}</p>
+      <div className="flex items-center justify-between gap-2">
+        <Button bgColor="#fb923c" size={50} onClick={onPreviousStep}>
+          <span className="text-3xl text-white">-</span>
         </Button>
         <input
-          className="range block h-2 w-3/4 cursor-pointer appearance-none rounded-lg bg-[#9cc9d0] accent-[#db3315] dark:bg-gray-700"
+          className="range block h-2 w-3/4 cursor-pointer appearance-none rounded-full bg-[#4AC3F6] accent-orange-400 shadow-xl shadow-indigo-400/55"
           type="range"
           min="1"
           max="10"
           value={step}
           onChange={(e) => setStep(Number(e.target.value))}
         />
-        <Button bgColor="#F5CB3A" size={50} onClick={onNextStep}>
-          <span className="text-4xl text-black">+</span>
+        <Button bgColor="#fb923c" size={50} onClick={onNextStep}>
+          <span className="text-2xl text-white">+</span>
         </Button>
       </div>
     </div>
