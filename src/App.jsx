@@ -8,35 +8,41 @@ export default function App() {
   const [count, setCount] = useState(0)
   const [step, setStep] = useState(1)
 
-  function handleSubStep() {
+  function handleBackward() {
+    setCount((count) => count - step)
+  }
+
+  function handleForward() {
+    setCount((count) => count + step)
+  }
+
+  function handlePreviousStep() {
     if (step < 2) return
     setStep((step) => step - 1)
   }
-
+  function handleNextStep() {
+    setStep((step) => step + 1)
+  }
   function handleReset() {
     setCount(0)
     setStep(1)
   }
 
-  function handleSetStep(e) {
-    setStep(Number(e.target.value))
-  }
-
-  function handleSetCount() {
-    setCount((count) => count + step)
-  }
-
   return (
-    <div className="relative mx-auto grid h-screen w-full max-w-[786px] grid-cols-1 grid-rows-3 gap-4 rounded-lg bg-[#243C58] px-10 py-12">
-      <Screen count={count} onSetCount={handleSetCount} />
-      <Input step={step} onSetStep={handleSetStep} />
-      <Controls
-        step={step}
-        onSetCount={handleSetCount}
-        onSetStep={handleSetStep}
-        onSubStep={handleSubStep}
-      />
-      {count !== 0 || step !== 1 ? <Reset onReset={handleReset} /> : null}
+    <div className="relative grid h-screen w-full grid-cols-1 grid-rows-3 gap-4 bg-[#243C58]">
+      <div className="relative mx-auto max-w-[786px]">
+        <Screen count={count} />
+        <Input step={step} setStep={setStep} />
+        <Controls
+          step={step}
+          onSetCount={setCount}
+          onBackward={handleBackward}
+          onForward={handleForward}
+          onPreviousStep={handlePreviousStep}
+          onNextStep={handleNextStep}
+        />
+        {count !== 0 || step !== 1 ? <Reset onReset={handleReset} /> : null}
+      </div>
     </div>
   )
 }

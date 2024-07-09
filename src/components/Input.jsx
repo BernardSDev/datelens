@@ -1,4 +1,4 @@
-export default function Input({ step, onSetStep }) {
+export default function Input({ step, setStep }) {
   return (
     <div className="">
       <input
@@ -7,7 +7,7 @@ export default function Input({ step, onSetStep }) {
         min="1"
         max="10"
         value={step}
-        onChange={onSetStep}
+        onChange={(e) => setStep(Number(e.target.value))}
       />
     </div>
   )
