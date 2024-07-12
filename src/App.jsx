@@ -30,7 +30,7 @@ export default function App() {
   }
 
   return (
-    <div className="bg-[#8abdd3e5]">
+    <div className="bg-white">
       <div className="mx-auto max-w-[768px]">
         <div
           className="h-dvh w-full px-6"
